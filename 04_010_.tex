@@ -1,0 +1,122 @@
+
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+    % Package zum besseren Erstellen von Tabellen
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+    % Package zum schöneren Erstellen von Tabellen
+\usepackage{array}
+    % Package zum leichteren Erstellen von Tabellen
+\usepackage{ragged2e}
+    % notwendig zum Funktionieren von \raggedright und \raggedleft in Tabellen
+\usepackage[ngerman]{babel}
+
+\title{Hausaufgaben zum 22.11.17}
+\author{D. B. \and S. W.}
+\date{20.11.2017}
+
+\begin{document}
+
+\maketitle
+
+\section{1.Aufgabe}
+
+{\setlength{\tabcolsep}{2pt}
+    % Verringert den Abstand zwischen den einzelnen Spalten
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}p{0.3\linewidth}p{0.45\linewidth}>{\RaggedRight\arraybackslash}p{0.25\linewidth}@{}}
+    % Hiermit wird die Tabelle erstellt. tabular* deutet auf eine Tabelle mit festgelegter Breite hin, in diesem Fall \linewidth. \extracolsep{\fill} verringert den Abstand zwischen den einzelnen Spalten, p{} legt die Breiten der Spalten fest.
+                            
+    \toprule
+        % Erstellt die oberste Vertikale der Tabelle
+    \multicolumn{0}{c}{a}   & \multicolumn{0}{c}{b}  &  \multicolumn{0}{c}{c} \\
+        % Inhalt + Formatierung der ersten Zeile
+    \midrule
+        % Erstellt die zweite Vertikale der Tabelle
+    Es waren Robs letzte, ruhige Augenblicke seliger Unwissenheit, doch in seiner Einfalt empfand er es als unbillig, dass er mit seinen Brüdern und seiner Schwester zuhause bleiben musste. Es war Frühlingsbeginn, und die Sonne stand so tief, dass ihre wärmenden Strahlen unter das vorstehende Strohdach drangen. 
+        % Text der ersten Zelle der zweiten Zeile
+    & Rob rekelte sich auf dem unebenen, steinernen Vorplatz neben der Haustür und genoss die Behaglichkeit. Eine Frau bahnte sich vorsichtig einen Weg auf der mit Löchern übersäten Carpenters`s Street. 
+        % Text der zweiten Zelle der zweiten Zeile
+    & Die Straße war genauso reparaturbedürftig wie die meisten kleinen Arbeitshäuser, die sie säumten. Handwerker, die ihren Lebensunterhalt damit verdienten, dass für Reichere und vom Glück Begünstigtere solide Häuser bauten, hatten sie ohnehin ohne jede Sorgfalt gebaut.\\
+        % Text der dritten Zelle der zweiten Zeile
+
+\end{tabular*}
+    % Beendet die Tabelle. Eine Zeile wird durch \\ beendet, die einzelnen Zellen werden durch & beendet.
+} 
+
+\section{2.Aufgabe}
+
+\sffamily
+    % Stellt auf eine serifenlose Schrift um.
+\begin{tabular}{|>{\bfseries} >{} cccc >{\bfseries} cccccc}
+    % Beginnt eine weitere Tabelle, diesmal ohne festgelegte Breite. Alle Spalten sind zentriert (c), zwei von ihnen als Formatierung >fett< durch das >{\bfseries}.
+        \cline{1-1} \cline{4-4} \cline{9-9}
+            
+    \multicolumn{0}{|c|}{\textbf {x}} &  &  & \multicolumn{0}{|c|}{\textbf {x}} &  &  &  &  &    \multicolumn{0}{|c|}{\textbf {x}} \\
+    
+        \cline{2-3}\cline{5-8}\cline{10-10}
+    
+    x & x & x & x & x & x & x & x & x & \multicolumn{0}{c|}{x} \\
+    
+        \cline{2-3} \cline{6-10}
+     
+    x & \multicolumn{1}{|c}{x} & \multicolumn{1}{c|}{x} & x & x & \multicolumn{1}{|c}{x} & x & x & x & \multicolumn{0}{c|}{x} \\
+    
+        \cline{6-6}\cline{9-9}
+        
+    x & \multicolumn{0}{|c}{x} & \multicolumn{0}{c|}{x} & x & x & x & \multicolumn{0}{|c}{x} & x & \multicolumn{0}{|c|}{x} & \multicolumn{0}{c|}{x} \\
+    
+        \cline{2-3}\cline{5-5}\cline{7-8}\cline{10-10}
+        
+    x & x & x & \multicolumn{0}{c|}{x} &  & \multicolumn{0}{|c}{x} & x & x & x & \multicolumn{0}{c|}{x} \\
+    
+        \cline{1-4}\cline{6-10}
+
+\end{tabular}
+    % Beendet die Tabelle. In dieser Tabelle werden mit \cline{} vertikale Linien erstellt, immer bei den angegebenen Zellen der Zeile. Manche Zellen sind einzeln formatiert mit \multicolumn{}{}{}. Mit diesem Befehl wurden senkrechte Striche erzeugt und einzelne Zellinhalte zu >fett< formatiert. Leider hat bei uns kein einziger Befehl für kursive Schrift funktioniert den wir gefunden haben, weshalb diese Formatierung leider fehlt. 
+
+\section{3.Aufgabe}
+\subsection{a.}
+    % Befehl zum Erstellen eines Unterpunktes
+\begin{tabularx}{8.5cm}{|>{\raggedright\arraybackslash}X|
+                         >{\raggedleft\arraybackslash}X|
+                         >{\centering\arraybackslash}X|
+                         >{\raggedleft\arraybackslash}X|}
+    %Prämbel der Tabelle.
+    % Verwendung des tabularx-Pakets, um eine einheitliche Breite von 8,5cm einstellen zu können.
+    %\verb+\raggedright+ führt zum rechtsbündigen Text.
+    %\verb+\raggedleft+ führt zu einem linksbündigen Text.
+    %\verb+\centering+ führt zu einer Zentrierung.
+    %Bei Verwendung von \verb+\raggedright+ in p-Spalten hat \\ nicht mehr dieselbe Bedeutung. Das wird durch \verb+\arraybackslash+ gelöst.
+    \hline 
+    % Erstellung der oberen horizontalen Linie.
+    Bananen & Äpfel & Trauben & Kirschen\\
+    \hline
+    % Erstellung der mittleren horizontalen Linie.
+    Sind & alle & immer & lecker \\
+    \hline
+    % Erstellung der unteren horizontalen Linie. 
+    
+\end{tabularx} 
+    % Ende der Tabelle.
+
+\subsection{b.}
+
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cc>{\footnotesize}l@{}}
+    %\verb+\linewidth+ führt zur Zeilenbreite. 
+    %\verb+\extracolsep{\fill}+ führt dazu, dass die Einträge in der Tabelle gleich verteilt sind.
+    %\verb+\footnotesize+ führt zu einer Verkleinerung der Schrift in der dritten Spalte.  
+    %ccl bedeutet, dass die ersten beiden Einträge zentriert und der letzte linksbündig ist
+
+    \toprule
+    % Fügt die obere Linie ein
+    345 & Liebe & \textsc{gebraten}\\
+    987 & Hass & \textsc {geräuchert}\\
+    % \verb+\textsc+ gibt den Ausdruck in geschweiften Klammern in Kapitälchen aus.
+    \bottomrule
+    %  Fügt die untere Linie in die Tabelle ein.
+
+\end{tabular*}
+    %Ende der Tabelle
+
+\end{document}

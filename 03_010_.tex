@@ -1,0 +1,96 @@
+
+
+\documentclass[12pt,a4paper]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[flushleft,neveradjust]{paralist}
+    % Wir implementieren das Paket für Paralist-Aufzählungen. Diese Aufzählungen sind global für das Dokument definiert und durch "flushleft" linksbündig. Zusätzlich bedeutet "nerveradjust", dass die Listeneinträge von den Rangzahlen nicht eingeschoben werden. Der Effekt zeigt sich in Aufgabe 2.
+\setdefaultenum{I.}{(A)}{(1)}{a.} 
+    % Wir definieren global für das Dokument, dass die Aufzählungszeichen "I." in der ersten Ebene, "(A)" in der zweiten, "(1)" in der dritten und "a." in der vierten Ebene gelten.     
+
+\title{Hausaufgaben zum 15.11.17}
+\author{D. B. \and S. W.}
+    % Als Autoren haben wir unsere Namen angegeben.
+\date{14.11.2017}
+    % Das Datum wird angegeben.
+    
+\begin{document}
+    % Beginn des Dokuments
+    
+\maketitle
+    % Titel wird im Dokument dargetellt.  
+\section{1.Aufgabe}
+    
+\begin{enumerate}
+    % Beginn einer Aufzählung
+  \item erste Ebene
+    % Erster Listeneintrag
+    
+  \begin{enumerate}
+    % Beginn einer zweiten Aufzählung
+    \item zweite Ebene
+    % und so weiter...
+    
+      \begin{enumerate}
+        \item dritte Ebene
+        
+          \begin{enumerate}
+            \item vierte Ebene
+            
+\end{enumerate}
+   \end{enumerate}
+       \end{enumerate}
+           \end{enumerate}
+           % Hiermit werden die verschiedenen Ebenen abgeschlossen
+           
+\section{2.Aufgabe}
+
+\setlength{\plitemsep}{1pt}
+    % Der Abstand zwischen den Listenpunkten beträgt 1.
+\setlength{\pltopsep}{1ex}
+    % Der Abstand zwischen dem vorangehenden und nachfolgenden Text beträgt 1.
+    
+Vorangehender Text \dots 
+
+\begin{compactenum}[I]
+    % Aufzählung mit großen römischen Zahlen beginnt.
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+	\item Listenpunkt
+\end{compactenum} 
+    % Aufzählung mit großen römischen Zahlen endet.
+Nachfolgender Text \dots     
+
+\section{3.Aufgabe}
+  
+\begin{itemize}
+    % Beginn einer ungeordenten Liste
+    \item In Zeile 1 hinter \frqq Wortbergen\flqq~ist ein Leerzeichen vor dem Komma zu viel.
+    \item In Zeile 3 wurden nach Semantik vier Punkte gesetzt, jedoch ist es typographisch
+        korrekter, im Falle einer Auslassung nur drei zu setzen und so auf den Endpunkt zu verzichten.
+    \item In Zeile 4 ist zwischen \frqq Ort\flqq~und dem Semikolon ein Leerzeichen zu viel. Außerdem     sind die Anführungszeichen oben hinter dem Wort \frqq Regelialien\flqq~falsch gewählt.
+        Anstatt dass sie aussehen wie zwei nebeneinander und oben liegende Kommata ("), sehen sie aus wie zwei gerade nebeneinander liegende Apostrophe ("). 
+    \item In Zeile 6 sollte eigentlich hinter \frqq beherrscht\flqq~ein Doppelpunkt stehen und nicht
+        in der nächsten Zeile.
+    \item In Zeile 10 muss das erste Anführungszeichen vor \frqq bösen\flqq~unten stehen. Anführungszeichen der
+        Form "'\dots"'~werden im Englischen verwendet.
+    \item In Zeile 12 muss müssen nach \frqq Weg\flqq~drei Punkte oder ein Punkt stehen. Zwei Punkte gibt es
+        als Satzzeichen nicht.
+\end{itemize}
+    % Ende der ungeordenten Liste
+    % Anmerkung: die Befehle \frqq und \flqq bilden die >< im Text ab. \dots bildet drei Punkte ab,  "' und "´ bilden die unterschiedlichen hier verwendeten Anführungszeichen. Damit dabei auch ein Leerzeichen sicher dahinter steht, verwenden wir ~ für das festgelegte und berücksichtigte Leerzeichen.
+
+\section{4.Aufgabe}
+  
+In der Prämbel des Dokuments muss an der Stelle wo das Userpackage für die neue deutsche Rechtschreibung importiert wird french als Variante des Befehls \verb+\usepackage[ngerman]{babel}+ stehen, also in diesem Falle \verb+\usepackage[french]{babel}+. So wird die französische Silbentrennung und auch die französische Verwendung von Satzzeichen implementiert.
+
+\end{document}
