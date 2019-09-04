@@ -1,0 +1,59 @@
+%FACH: MintGrün
+%FAKULTAET: 
+%SEMESTER: 1
+%ABSCHLUSS: 
+
+%FACH: MintGrün
+%FAKULTAET: 
+%SEMESTER: 1
+%ABSCHLUSS: 
+
+\documentclass [12pt,a4paper]{letter} 
+    %Die Dokumentenklasse ist "letter", was bedeutet, dass wir hier ein Briefdokument 	erstellen. Die zusätzlichen Befehle [12pt] und [a4paper] in den eckigen Klammern geben an, dass die Schriftgröße 12 und die Papierart A4 ist.
+\usepackage[T1]{fontenc}
+    %Die Anzahl der Schriftzeichen wurde eingstellt. Es sind 128 Schriftzeichen ohne Umlaute.
+\usepackage[utf8]{inputenc}
+    %Dieses Package gibt an, dass in diesem Dokument ASCII Zeichen, also lateinische Buchstaben verwendet werden.
+\usepackage[ngerman]{babel} 
+    %Dieses Package fügt die Worttrennung nach der neuen Rechtschreibung, eine deutsche Datumsausgabe und eine leichtere Eingabe von Umlauten ein.
+
+\begin{document} 
+    %\begin{document} grenzt die Präambel von dem Textkörper des Latexdokuments ab und beginnt das Dokument.
+
+\address{Max Mustermann \\Musterstraße 45 \\ 10320 Berlin} 
+    %\address beinhaltet die Anschrift des Absenders in formatierter Form.
+\date{25. Oktober 2017} 
+    %Der Befehl \date{} teilt dem Dokument ein Datum zu.
+\signature{Max Mustermann \\ Director of Musterfirma} 
+    %Dieser Befehlt fügt die Signatur des Absenders am Ende des Briefes ein. Er ist vorformatiert, sodass darüber Platz für eine Unterschrift auf dem Brief ist.
+
+\begin{letter} 
+    %Hier wird der Brief begonnen.
+{Herr Petrosilius Zwackelmann \\
+Am Eichholz 11 \\
+21614 Buxtehude } 
+    %Dies ist die Anschrift des Empfängers.
+
+\opening{Sehr geehrter Herr Zwackelmann,} 
+    %\opening{} beschreibt den Anfang des Brieftextes, indem der Befehl die anfängliche Grußformel einfügt.
+
+    %Aufgabe 5: 
+wenn man die Dokumentenklasse falsch schreibt, so erhält man keine pdf-Ausgabe, da die somit angeforderte Klasse für LaTeX unbekannt ist. \\
+\\
+Wenn man in der Klasse {letter} den Befehl \verb+\section{}+ benutzt, erhält man den Fehler 'undefined control sequence', weil der Befehl in der Dokumentenklasse {letter} nicht definiert und dadurch ungültig ist.\\
+\\
+Schreibt man \verb+\usepackage[ngerman]{babel}+ nach \verb+\begin{letter}+, so bekommt man 'can be used only in preamble' als Fehlermeldung, denn Packages lassen sich nur in der Präambel des Dokuments einfügen.\\
+\\
+    %Aufgabe 6: 
+Wenn man statt \verb+\opening{Liebe Julia,}+ \verb+\opening{Liebe Julia},+ schreibt, rutscht das Komma in eine eigene Zeile, da es nicht im Opening enthalten und zwischen dem Komma und dem darauffolgenden Textstück eine Leerzeile vorhanden ist. 
+
+\closing{Mit freundlichen Grüßen,} 
+    %Der Befehl \closing{} fügt die abschließende Grußformel in den Brief ein.
+\cc{Lukas Podolski, \ Manuel Neuer} 
+    %Der Befehl \cc{} fügt die Angabe der weiteren Empfänger des Briefes ein.
+
+\end{letter} 
+    %\end{letter} beendet den Brief
+
+\end{document} 
+    %\end{document} beendet das Dokument.
